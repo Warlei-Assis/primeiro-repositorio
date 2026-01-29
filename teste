@@ -1,0 +1,14 @@
+resource "azurerm_public_ip" "AZR-DESKTOP-01-pip-b9fb6d2218ee421f88a80262d1258713" {
+  name                = data.azurerm_public_ip.pbib-azr-desktop-01.name
+  location            = var.folder_rg_location
+  resource_group_name = var.folder_rg_name
+  allocation_method   = "Static"
+  sku                 = "Basic"
+  sku_tier            = "Regional"
+
+
+  tags = {
+    "Servico" = "Desktop Central"
+    cost-center = "652"
+  }
+}
